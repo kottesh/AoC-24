@@ -32,11 +32,10 @@ int main () {
         int num1, num2;
         std::stringstream curr(line);
 
-        while (curr >> num1 >> num2) {
-            locations_1.push_back(num1);
-            locations_2.push_back(num2);
-            store[num2]++;
-        }
+        curr >> num1 >> num2;
+        locations_1.push_back(num1);
+        locations_2.push_back(num2);
+        store[num2]++;
     }
 
     std::cout << part_1(locations_1, locations_2) << "\n";
